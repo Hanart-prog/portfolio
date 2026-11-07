@@ -38,6 +38,8 @@ jobs:
 
       - name: Build
         run: npm run build -- --base=/portfolio/
+        env:
+          VITE_GA_MEASUREMENT_ID: ${{ vars.VITE_GA_MEASUREMENT_ID }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
